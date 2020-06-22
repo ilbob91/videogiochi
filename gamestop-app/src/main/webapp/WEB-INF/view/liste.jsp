@@ -11,7 +11,8 @@
 </head>
 <body>
 
-		
+<div style="margin-left: 500; margin-top: 1000;padding-left: 400" >
+
 	<table border="1">
 		<tr>
 
@@ -32,8 +33,59 @@
 			</tr>
 		</c:forEach>
 	</table>
+		</div>
+		<div style="margin-right: 500; margin-top: 1000">
+		<h3>Ordina per Categoria</h3>
+	<form action="listeCategoria">
+
+	    Seleziona la categoria: <br> <br>
+            <input type="radio" name="categoria" value="0" checked="checked"> 
+            <label    for="horror">HORROR</label><br> 
+            <input type="radio" name="categoria" value="1"> 
+            <label for="sport">SPORT</label><br>
+            <input type="radio" name="categoria" value="2"> 
+            <label for="fps">FPS</label><br>
+          
+            
+
+        Seleziona il filtro: <br> <br>
+
+            <input type="radio" name="field" value="0" checked="checked"> 
+            <label    for="titolo">Titolo</label><br> 
+            <input type="radio" name="field" value="1"> 
+            <label for="pegi">Pegi</label><br>
+            <input type="radio" name="field" value="2"> 
+            <label for="prezzo">Prezzo</label><br><br>
+             <input type="submit"value="ordina"><br> <br>
+	</form>
+	<h3>Ordina per Classificazione</h3>
+  <form action="listePegi">
+
+	    Seleziona la classificazione: <br> <br>
+            <input type="radio" name="pegi" value="0" checked="checked"> 
+            <label    for="diciotto">18</label><br> 
+            <input type="radio" name="pegi" value="1"> 
+            <label for="sedici">16</label><br>
+            <input type="radio" name="pegi" value="2"> 
+            <label for="tre">3</label><br>
+            
+            
+
+        Seleziona il filtro: <br> <br>
+
+            <input type="radio" name="field" value="0" checked="checked"> 
+            <label    for="titolo">Titolo</label><br> 
+            <input type="radio" name="field" value="1"> 
+            <label for="categoria">Categoria</label><br>
+            <input type="radio" name="field" value="2"> 
+            <label for="prezzo">Prezzo</label><br><br>
+             <input type="submit"value="ordina"><br> <br>
+	</form>
+	</div>
+
 	<br>
 	<br>
+	
 	<a href="indietro">Torna Indietro</a>
 </body>
 </html>

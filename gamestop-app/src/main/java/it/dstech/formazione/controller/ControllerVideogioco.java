@@ -108,18 +108,6 @@ public class ControllerVideogioco {
 			break;
 		}
 			break;
-		case 3: switch (field) {
-		case 0: 
-			lista = service.findByOrderByTitoloAsc();
-			break;
-		case 1: 
-			lista = service.findByOrderByPegiAsc();
-			break;
-		case 2: 
-			lista = service.findByOrderByPrezzoAsc();
-			break;
-		}
-			break;
 		}
 
 		model.addObject("lista", lista);
@@ -169,9 +157,19 @@ public class ControllerVideogioco {
 			break;
 		}
 			break;
-		case 3: switch (field) {
+		}
+
+		model.addObject("lista", lista);
+	
+		return model;
+	}
+	@RequestMapping("/listaField")
+	public ModelAndView findByTutti( @RequestParam("field") int field) {
+		ModelAndView model = new ModelAndView("liste");
+		List<Videogioco> lista = null;
+		 switch (field) {
 		case 0: 
-			lista = service.findByOrderByTitoloAsc();
+			lista = service.findByOrderByCategoriaAsc();
 			break;
 		case 1: 
 			lista = service.findByOrderByPegiAsc();
@@ -180,12 +178,8 @@ public class ControllerVideogioco {
 			lista = service.findByOrderByPrezzoAsc();
 			break;
 		}
-			break;
-		}
-
 		model.addObject("lista", lista);
 	
 		return model;
 	}
-	
 }

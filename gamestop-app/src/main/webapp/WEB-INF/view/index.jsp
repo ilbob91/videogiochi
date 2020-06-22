@@ -7,62 +7,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Home</title>
 </head>
 <body>
-<div align="center">
+<div align="center" style="margin-top: 300">
 <a href="new">Aggiungi Videogioco</a> &nbsp;
 <br><br><br>
-<div align="left">
-<h3>Ordina per Categoria</h3>
-<form action="listeCategoria">
 
-	    Seleziona la categoria: <br> <br>
-            <input type="radio" name="categoria" value="0"> 
-            <label    for="horror">HORROR</label><br> 
-            <input type="radio" name="categoria" value="1"> 
-            <label for="sport">SPORT</label><br>
-            <input type="radio" name="categoria" value="2"> 
-            <label for="fps">FPS</label><br>
-            <input type="radio" name="categoria" value="3" checked="checked"> 
-            <label for="tutte">Tutte le categorie</label><br>
-            
+<h3>Scegli l'ordine della lista</h3>
+<form action="listaField">
 
-        Seleziona il filtro: <br> <br>
-
+	    Seleziona: <br> <br>
             <input type="radio" name="field" value="0" checked="checked"> 
-            <label    for="titolo">Titolo</label><br> 
+            <label for="categoria">Categoria</label><br> 
             <input type="radio" name="field" value="1"> 
-            <label for="pegi">Pegi</label><br>
+            <label for="pegi">Classificazione</label><br>
             <input type="radio" name="field" value="2"> 
-            <label for="prezzo">Prezzo</label><br><br>
-             <input type="submit"value="ordina"><br> <br>
-	</form>
-	<h3>Ordina per Classificazione</h3>
-  <form action="listePegi">
+            <label for="prezzo">Prezzo</label><br>
+            <input type="submit" value="Seleziona">
+               	</form>
+	<br> <br>
 
-	    Seleziona la classificazione: <br> <br>
-            <input type="radio" name="pegi" value="0"> 
-            <label    for="diciotto">18</label><br> 
-            <input type="radio" name="pegi" value="1"> 
-            <label for="sedici">16</label><br>
-            <input type="radio" name="pegi" value="2"> 
-            <label for="tre">3</label><br>
-            <input type="radio" name="pegi" value="3" checked="checked"> 
-            <label for="tutte">Tutte le categorie</label><br>
-            
-
-        Seleziona il filtro: <br> <br>
-
-            <input type="radio" name="field" value="0" checked="checked"> 
-            <label    for="titolo">Titolo</label><br> 
-            <input type="radio" name="field" value="1"> 
-            <label for="categoria">Categoria</label><br>
-            <input type="radio" name="field" value="2"> 
-            <label for="prezzo">Prezzo</label><br><br>
-             <input type="submit"value="ordina"><br> <br>
-	</form>
-   	</div>
+ 
 <table border="1">
 		<tr>
 		
@@ -86,7 +52,7 @@
 		</tr>
 		</c:forEach>
 	</table>
+	  	</div>
 	
-	</div>
 </body>
 </html>
