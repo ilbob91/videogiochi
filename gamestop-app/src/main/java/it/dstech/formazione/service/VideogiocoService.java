@@ -5,8 +5,11 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
+import it.dstech.formazione.model.Categoria;
+import it.dstech.formazione.model.Pegi;
 import it.dstech.formazione.model.Videogioco;
 import it.dstech.formazione.repository.VideogiocoRepository;
 
@@ -32,19 +35,35 @@ public class VideogiocoService {
 		return repo.findById(id).get();
 	}
 
-	public List<Videogioco> findByTitolo(String titolo) {
-		return repo.findByTitolo(titolo);
-	}
 
-	public List<Videogioco> findByCategoria(String cat) {
-		return repo.findByCategoria(cat);
+	public List<Videogioco> findByCategoriaOrderByPegiDesc(Categoria c) {
+		return repo.findByCategoriaOrderByPegiDesc(c);
 	}
-
-	public List<Videogioco> findByPegi(String pegi) {
-		return repo.findByPegi(pegi);
+	public List<Videogioco> findByCategoriaOrderByTitoloAsc(Categoria c) {
+		return repo.findByCategoriaOrderByTitoloAsc(c);
 	}
-
-	public List<Videogioco> findByPrezzo(Long prezzo) {
-		return repo.findByPrezzo(prezzo);
+	public List<Videogioco> findByCategoriaOrderByPrezzoDesc(Categoria c) {
+		return repo.findByCategoriaOrderByPrezzoDesc(c);
+	}
+	public List<Videogioco> findByPegiOrderByCategoriaDesc(Pegi c) {
+		return repo.findByPegiOrderByCategoriaDesc(c);
+	}
+	public List<Videogioco> findByPegiOrderByTitoloAsc(Pegi c) {
+		return repo.findByPegiOrderByTitoloAsc(c);
+	}
+	public List<Videogioco> findByPegiOrderByPrezzoDesc(Pegi c) {
+		return repo.findByPegiOrderByPrezzoDesc(c);
+	}
+	public List<Videogioco> findByOrderByTitoloAsc(){
+		return repo.findByOrderByTitoloAsc();
+	}
+	public List<Videogioco> findByOrderByPegiAsc(){
+		return repo.findByOrderByPegiAsc();
+	}
+	public List<Videogioco> findByOrderByPrezzoAsc(){
+		return repo.findByOrderByPrezzoAsc();
+	}
+	public List<Videogioco> findByOrderByCategoriaAsc(){
+		return repo.findByOrderByCategoriaAsc();
 	}
 }

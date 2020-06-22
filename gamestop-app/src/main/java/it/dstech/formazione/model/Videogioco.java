@@ -1,6 +1,8 @@
 package it.dstech.formazione.model;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,23 +13,17 @@ public class Videogioco {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 private String titolo;
-private String pegi;
-private String categoria;
-private Long prezzo;
-
+@Enumerated(EnumType.STRING)
+private Pegi pegi;
+@Enumerated(EnumType.STRING)
+private Categoria categoria;
+@Enumerated(EnumType.STRING)
+private Prezzo prezzo;
 public Long getId() {
 	return id;
 }
 public void setId(Long id) {
 	this.id = id;
-}
-
-
-public Long getPrezzo() {
-	return prezzo;
-}
-public void setPrezzo(Long prezzo) {
-	this.prezzo = prezzo;
 }
 public String getTitolo() {
 	return titolo;
@@ -35,18 +31,26 @@ public String getTitolo() {
 public void setTitolo(String titolo) {
 	this.titolo = titolo;
 }
-public String getPegi() {
+public Pegi getPegi() {
 	return pegi;
 }
-public void setPegi(String pegi) {
+public void setPegi(Pegi pegi) {
 	this.pegi = pegi;
 }
-public String getCategoria() {
+public Categoria getCategoria() {
 	return categoria;
 }
-public void setCategoria(String categoria) {
+public void setCategoria(Categoria categoria) {
 	this.categoria = categoria;
 }
+public Prezzo getPrezzo() {
+	return prezzo;
+}
+public void setPrezzo(Prezzo prezzo) {
+	this.prezzo = prezzo;
+}
+
+
 
 
 

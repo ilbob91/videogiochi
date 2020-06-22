@@ -17,15 +17,15 @@
 			</tr>
 			<tr>
 				<td>Classificazione:</td>
-				<td><form:input path="pegi" /></td>
+				<td><form:radiobuttons path="pegi" /></td>
 			</tr>
 			<tr>
 				<td>Prezzo:</td>
-				<td><form:input path="prezzo" /></td>
+				<td><form:radiobuttons path="prezzo" /></td>
 			</tr>
 			<tr>
 				<td>Categoria:</td>
-				<td><form:input path="categoria" /></td>
+				<td><form:radiobuttons path="categoria" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="Salva"></td>
